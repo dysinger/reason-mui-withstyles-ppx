@@ -1,0 +1,5 @@
+(env
+ (release
+  (flags (:standard -w +a-4-9-27-40-42))))
+
+(dirs :standard \ examples)
