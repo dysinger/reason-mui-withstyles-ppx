@@ -10,15 +10,20 @@
   "version": "1.0.2",
   "author": "Jonathan Siebern <jsiebern88@gmail.com>",
   "license": "MIT",
-  "scripts": {
-    "build": "esy build",
-    "install": "esy install"
-  },
   "keywords": [
     "Reason"
   ],
   "description": "This is a ppx for using the withStyles component in @jsiebern/bs-material-ui",
   "dependencies": {
-    "esy": "^0.5.6"
+    "@opam/dune": "^1.6.0",
+    "@reason-native/console": "*",
+    "@reason-native/pastel": "*",
+    "ocaml": "~4.2.0",
+    "refmterr": "*"
+  },
+  "esy": {
+    "build": "refmterr dune build --profile=release @install",
+    "watch": "refmterr dune build --profile=release @install --watch",
+    "install": "esy-installer bs-material-ui-ppx.install"
   }
 }
